@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Syn Project File: Show File",
+        "command": "show_file",
+    },
+    {
+        "caption": "Syn Project File: Clear File",
+        "command": "clear_file",
+    },
+    {
+        "caption": "Syn Project File: Move File",
+        "command": "move_file",
+    },
+    {
+        "caption": "Syn Project File: Clear Spec File",
+        "command": "clear_spec_file",
+    },
+    {
+        "caption": "Syn Project File: Move Spec File",
+        "command": "move_spec_file",
+    },
+]

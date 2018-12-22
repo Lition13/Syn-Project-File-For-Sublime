@@ -1,0 +1,7 @@
+[
+	{ "keys": ["super+1", "super+1"], "command": "show_file"},
+	{ "keys": ["super+1", "super+2"], "command": "clear_file"},
+	{ "keys": ["super+1", "super+3"], "command": "move_file"},
+	{ "keys": ["super+2", "super+1"], "command": "clear_spec_file"},
+	{ "keys": ["super+2", "super+2"], "command": "move_spec_file"}
+]
