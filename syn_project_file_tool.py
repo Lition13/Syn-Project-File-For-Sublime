@@ -8,18 +8,27 @@ import sublime_plugin
 FILE_INFO = {}
 
 # 项目根目录
-PROJECT_ROOT = "server"
+PROJECT_ROOT = ""
 
 # 当前 Windows 系统上操作的根目录 
-SRC_ROOT = "F:\\SRC\\ROOT\\"
+SRC_ROOT = ""
 
 # 目标根目录
-DEST_ROOT = "F:\\DEST\\ROOT\\" + PROJECT_ROOT
+DEST_ROOT = ""
 
 # 项目文件信息
 PROJECT_FILES = {}
 
-def init():
+# 加载 Preferences 配置
+SETTINGS = sublime.load_settings('SynProjectFileTool.sublime-settings')
+
+def Init():
+	# 初始化配置信息
+	settings = sublime.load_settings('Preferences.sublime-settings')
+	SRC_ROOT = settings.get("syf_src_root", SETTINGS.get("syf_src_root", ""))
+	PROJECT_ROOT = settings.get("syf_project_root", SETTINGS.get("syf_project_root", ""))
+	DEST_ROOT = settings.get("syf_dest_root", SETTINGS.get("syf_dest_root", ""))
+
 	for root , dirs, files in os.walk(SRC_ROOT):
 		for name in files:
 			temp_path = os.path.join(root, name)
