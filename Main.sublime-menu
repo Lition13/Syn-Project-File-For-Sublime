@@ -1,0 +1,44 @@
+[
+    {
+        "id": "tools",
+        "children":
+        [
+        	{
+        		"id": "Move File Tools",
+                "caption": "Move File Tools",
+	        	"children":[
+	        		{
+		                "id": "Move_File",
+		                "mnemonic": "M",
+		                "caption": "Move File",
+		                "command": "move_file"
+		            },
+		            {
+		                "id": "Show_File",
+                		"mnemonic": "S",
+		                "caption": "Show File",
+		                "command": "show_file"
+		            },
+		            {
+		                "id": "Clear_File",
+                		"mnemonic": "C",
+		                "caption": "Clear File",
+		                "command": "clear_file"
+		            },
+		            {
+		                "id": "Clear_Spec_File",
+                		"mnemonic": "C",
+		                "caption": "Clear Spec File",
+		                "command": "clear_spec_file"
+		            },
+		            {
+		                "id": "Move_Spec_File",
+                		"mnemonic": "C",
+		                "caption": "Move Spec File",
+		                "command": "move_spec_file"
+		            }
+	        	]
+        	}
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+[
+	{ "keys": ["ctrl+1", "ctrl+1"], "command": "show_file"},
+	{ "keys": ["ctrl+1", "ctrl+2"], "command": "clear_file"},
+	{ "keys": ["ctrl+1", "ctrl+3"], "command": "move_file"},
+	{ "keys": ["ctrl+2", "ctrl+1"], "command": "clear_spec_file"},
+	{ "keys": ["ctrl+2", "ctrl+2"], "command": "move_spec_file"}
+]
