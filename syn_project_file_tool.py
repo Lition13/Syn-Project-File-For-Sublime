@@ -25,6 +25,7 @@ SETTINGS = sublime.load_settings('SynProjectFileTool.sublime-settings')
 def init():
 	# 初始化配置信息
 	settings = sublime.load_settings('Preferences.sublime-settings')
+	global SRC_ROOT, PROJECT_ROOT, DEST_ROOT
 	SRC_ROOT = settings.get("spf_src_root", SETTINGS.get("spf_src_root", ""))
 	PROJECT_ROOT = settings.get("spf_project_root", SETTINGS.get("spf_project_root", ""))
 	DEST_ROOT = settings.get("spf_dest_root", SETTINGS.get("spf_dest_root", ""))
