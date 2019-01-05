@@ -19,16 +19,16 @@ DEST_ROOT = ""
 # 项目文件信息
 PROJECT_FILES = {}
 
-# 加载 Preferences 配置
-SETTINGS = sublime.load_settings('SynProjectFileTool.sublime-settings')
 
 def init():
+	global SRC_ROOT, PROJECT_ROOT, DEST_ROOT
+
 	# 初始化配置信息
 	settings = sublime.load_settings('Preferences.sublime-settings')
-	global SRC_ROOT, PROJECT_ROOT, DEST_ROOT
-	SRC_ROOT = settings.get("spf_src_root", SETTINGS.get("spf_src_root", ""))
-	PROJECT_ROOT = settings.get("spf_project_root", SETTINGS.get("spf_project_root", ""))
-	DEST_ROOT = settings.get("spf_dest_root", SETTINGS.get("spf_dest_root", ""))
+	plugin_settings = sublime.load_settings('SynProjectFileTool.sublime-settings')
+	SRC_ROOT = settings.get("spf_src_root", plugin_settings.get("spf_src_root", ""))
+	PROJECT_ROOT = settings.get("spf_project_root", plugin_settings.get("spf_project_root", ""))
+	DEST_ROOT = settings.get("spf_dest_root", plugin_settings.get("spf_dest_root", ""))
 
 	for root , dirs, files in os.walk(SRC_ROOT):
 		for name in files:
