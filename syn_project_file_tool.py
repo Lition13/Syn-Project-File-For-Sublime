@@ -176,9 +176,6 @@ class MoveSpecFileCommand(sublime_plugin.WindowCommand):
 			FILE_INFO[self.file_list[selected]] = False
 
 
-
-init()
-
 def delay():
 	check_file_change()
 	sublime.set_timeout_async(lambda:delay(), DELAY_TIME * 1000)
@@ -186,3 +183,6 @@ def delay():
 
 DELAY_TIME = 1
 sublime.set_timeout_async(lambda:delay(), DELAY_TIME * 1000)
+
+# 延迟加载初始化函数，不然读不到配置
+sublime.set_timeout_async(lambda:init(), 0.1 * 1000)
